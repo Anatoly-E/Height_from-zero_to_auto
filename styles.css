@@ -8,7 +8,13 @@
 body {
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: rebeccapurple;
+  background-color: #1f242e;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
@@ -16,21 +22,34 @@ h1 {
   text-align: center;
   padding: 1rem;
 }
+
 .example {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: olivedrab;
   border-radius: 0.5rem;
+  margin: 1rem;
+  background-color: #33535b;
+}
+
+.example__title {
+  padding: 1rem 1rem 0;
+}
+
+.example__title h2 {
+  color: #fff;
+}
+
+.example__text {
+  padding: 0 1rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.5s ease-in-out;
 }
 
-.example > div {
+.example__text > div {
   overflow: hidden;
 }
 
-.example:hover {
+.example:hover .example__text {
   grid-template-rows: 1fr;
 }
