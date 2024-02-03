@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: rebeccapurple;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+.example {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: olivedrab;
+  border-radius: 0.5rem;
+
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-in-out;
+}
+
+.example > div {
+  overflow: hidden;
+}
+
+.example:hover {
+  grid-template-rows: 1fr;
+}
